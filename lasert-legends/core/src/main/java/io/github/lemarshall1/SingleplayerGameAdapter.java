@@ -12,13 +12,15 @@ public class SingleplayerGameAdapter implements Screen {
 	@Override
 	public void show() {
 		// Called when this screen becomes the current screen
+        System.out.println("SingleplayerGameAdapter is now active.");
 	}
 
-	@Override
-	public void render(float delta) {
-		game.update();
-		game.render();
-	}
+    @Override
+    public void render(float delta) {
+        System.out.println("Rendering SingleplayerGameAdapter...");
+        game.update();
+        game.render();
+    }
 
 	@Override
 	public void resize(int width, int height) {

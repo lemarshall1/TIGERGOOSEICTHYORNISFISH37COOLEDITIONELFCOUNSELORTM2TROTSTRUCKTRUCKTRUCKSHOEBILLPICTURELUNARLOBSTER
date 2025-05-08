@@ -4,16 +4,18 @@
 	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
 	"configurations": [
-
-		// A launch configuration that can be used to run a Java program.
+		{
+			"type": "java",
+			"name": "Lwjgl3Launcher",
+			"request": "launch",
+			"mainClass": "io.github.lemarshall1.lwjgl3.Lwjgl3Launcher",
+			"projectName": "lwjgl3"
+		},
 		{
 			"type": "java",
 			"name": "Launch Java Program",
 			"request": "launch",
 			"mainClass": ""
 		}
-
-
-
 	]
 }

@@ -12,7 +12,12 @@ public class SingleplayerGame {
 
     public SingleplayerGame() {
         batch = new SpriteBatch();
-        background = new Texture("singleplayer_background.png"); // Replace with your background image
+        try {
+            background = new Texture("singleplayer_background.png");
+            System.out.println("Background texture loaded: singleplayer_background.png");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         player = new Player("player_texture.png", Gdx.graphics.getWidth() / 2f, Gdx.graphics.getHeight() / 2f, 3);
     }
 
@@ -36,6 +41,7 @@ public class SingleplayerGame {
     }
 
     public void render() {
+        System.out.println("Rendering SingleplayerGame...");
         ScreenUtils.clear(0, 0, 0, 1);
 
         batch.begin();
