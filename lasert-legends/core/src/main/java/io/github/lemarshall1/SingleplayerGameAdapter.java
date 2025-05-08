@@ -3,47 +3,45 @@ package io.github.lemarshall1;
 import com.badlogic.gdx.Screen;
 
 public class SingleplayerGameAdapter implements Screen {
-	private SingleplayerGame game;
+    private final SingleplayerGame singleplayerGame;
 
-	public SingleplayerGameAdapter() {
-		game = new SingleplayerGame();
-	}
+    public SingleplayerGameAdapter() {
+        this.singleplayerGame = new SingleplayerGame();
+    }
 
-	@Override
-	public void show() {
-		// Called when this screen becomes the current screen
-        System.out.println("SingleplayerGameAdapter is now active.");
-	}
+    @Override
+    public void show() {
+        // Called when this screen becomes the current screen
+    }
 
     @Override
     public void render(float delta) {
-        System.out.println("Rendering SingleplayerGameAdapter...");
-        game.update();
-        game.render();
+        singleplayerGame.update(); // Update game logic
+        singleplayerGame.render(); // Render the game
     }
 
-	@Override
-	public void resize(int width, int height) {
-		// Handle resizing if necessary
-	}
+    @Override
+    public void resize(int width, int height) {
+        singleplayerGame.resize(width, height); // Handle resizing
+    }
 
-	@Override
-	public void pause() {
-		// Handle pause logic if necessary
-	}
+    @Override
+    public void pause() {
+        // Handle pause logic if needed
+    }
 
-	@Override
-	public void resume() {
-		// Handle resume logic if necessary
-	}
+    @Override
+    public void resume() {
+        // Handle resume logic if needed
+    }
 
-	@Override
-	public void hide() {
-		// Called when this screen is no longer the current screen
-	}
+    @Override
+    public void hide() {
+        // Called when this screen is no longer the current screen
+    }
 
-	@Override
-	public void dispose() {
-		game.dispose();
-	}
+    @Override
+    public void dispose() {
+        singleplayerGame.dispose(); // Dispose of resources
+    }
 }
